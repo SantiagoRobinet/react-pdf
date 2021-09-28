@@ -3,23 +3,12 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { Provider } from 'react-redux';
-import { BrowserRouter } from 'react-router-dom';
-import configureStore from './redux/configureStore';
 
-const initialState = {
-  charactersReducer:{}
-}
 
-const store = configureStore(initialState)
 
 ReactDOM.render(
   <React.StrictMode>
-    <Provider store={store}>
-      <BrowserRouter> 
-        <App />
-      </BrowserRouter>
-    </Provider>
+    <App />
   </React.StrictMode>,
   document.getElementById('root')
 );

@@ -1,15 +1,14 @@
 import React from 'react';
-import Header from './components/Header/Header';
+import PdfCreator from './components/PDFCreator'
+import { PDFViewer } from '@react-pdf/renderer';
 
-import Loading from './components/Loading/Loading';
 
 function App() {
   return (
-    <>
-   <Header />
-   <Loading />
-   </>
-  );
+    <PDFViewer width={"100%"} height={700}>
+      <PdfCreator />
+     </PDFViewer>
+);
 }
 
 export default App;
